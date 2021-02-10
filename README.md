@@ -4,17 +4,16 @@ PermissionX是一个用于简化Android运行时权限用法的开源库
 
 添加如下配置将PermissionX引入到你的项目中：
 
-‘’‘groory
+···groory
 dependencies{
   ...
   implementation('com.permissionx.mashan:permissionx:1.0.0')
 }
-
-‘’‘
+···
 
 然后就可以使用如下语法接口来申请运行时权限了：
 
-‘’‘kotlin
+···kotlin
  PermissionX.request(this,
                 android.Manifest.permission.CALL_PHONE,
                 android.Manifest.permission.READ_CONTACTS) { allGranted, deniedList ->
@@ -25,11 +24,11 @@ dependencies{
             }
         }
 
-’‘’
+···
 
 同样，记得在Manifest.xml文件中添加权限
 
-‘’‘xml
+···xml
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-’‘’
+···
